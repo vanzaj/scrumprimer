@@ -15,6 +15,7 @@ before_install:
   - export DISPLAY=:99.0
   - echo $DISPLAY
   - sh -e /etc/init.d/xvfb start
+  - ls robottests/ChromeProfiles/zh-cn/Default/
   - gem update
   - gem install bundler
   - pip install robotframework
