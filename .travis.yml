@@ -1,3 +1,4 @@
+sudo: false
 dist: trusty
 
 addons:
@@ -12,12 +13,14 @@ before_install:
   - wget https://chromedriver.storage.googleapis.com/2.27/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip -d /tmp
   - export PATH=$PATH:/tmp
+  - echo $DISPLAY
   - gem update
   - gem install bundler
-  - pip install robotframework
-  - pip install robotframework-selenium2library
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
+  - pip install robotframework
+  - pip install robotframework-selenium2library
+  - ls robottests/ChromeProfiles/zh-cn/Default/
 
 rvm:
   - 2.1
