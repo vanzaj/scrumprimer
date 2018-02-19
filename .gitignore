@@ -13,3 +13,6 @@ geckodriver.log
 *.pid
 robottests/ChromeProfiles/zh-cn/
 pyvenv/
+cypress/screenshots/
+cypress/videos/
+
